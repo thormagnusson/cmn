@@ -11,7 +11,7 @@ The syntax is inspired by SuperCollider and Lua, using the latter language's syn
 
 **1) Variables**
 
-A variable contains value of some sort. This value is 'assigned' to the variable with a '=' sign.
+A variable contains a value of some sort. It could be a note, a player, an instrument, etc. but it's the name of that value. This value is 'assigned' to the variable with a '=' sign.
 
 example:
 
@@ -36,8 +36,23 @@ Here you would play the note C
 
 	(note+fifth).play
 
-Here you play the note G
+Here you play the note G.
 
+Methods are applied to objects - or objects can have methods. Just like a bird can fly (bird = object; fly = method) - ojbects are nouns, whereas methods are verbs. 
+
+Methods can have adverbs, where the verb is given furhter instructions:
+
+	note.play(loudly)
+
+They can also be overloaded, such that they are given a subject
+
+	note.play(lefthand)
+	
+and of course:
+
+	note.play(lefthand, loudly)
+
+The possible methods infinite: any word from the vocabulary can be used. The CMN is about the relationship between the coder and the interpreter.
 
 **3) Arrays**
 
@@ -110,13 +125,29 @@ example:
 		umbrella.open
 	}
 
-or, here introducing the ELSE statement
+or, here introducing the ELSE block (which is evaluated if it is not raining)
 
 	if(raining == true) {
 		umbrella.open
-	} else
+	} else {
 		umbrella.close
 	}
 
+**6) Comments**
+
+Comments are secondary notations in CMN. Like in all programming languages, comments are human readable, but in CMN they can be explanations or further instructions, perhaps like Eric Satie's instructions in his Gnossienne scores.
+
+example:
+	
+	if(lefthand.busy == true) {
+		righthand.copy(lefthand.note+7) -- the right hand is angry!
+	} else {
+		4 do
+			scale.play(righthand) -- slowly but concentrated
+		end
+	}
 
 
+NOTE: when performing, it can be useful to signal when a new section of the code has been evaluated by the coder. This can happen by any means, such as light, movement, or sound. At the performance at the International Conference on Live Coding, a sound signal is emitted every time code is evaluated:
+
+	{SinOsc.ar(3999*Line.ar(1, 0, 0.01, doneAction:2)!2)}.play

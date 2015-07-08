@@ -1,0 +1,32 @@
+-- CMN 
+-- exercise 2
+
+instr = marimba.notes
+
+randomnote = {
+	10 do
+		instr.random.play([lefthand, righthand].choose)
+		0.5.wait;
+	end
+}
+
+randomnote.value -- evaluate the function
+
+-- a dramatic silence
+
+randomnote.value -- play it again
+
+4 do
+	randomnote.value -- left hand or right hand - 4 times (2 mallets in each hand?)
+end
+
+-- the above will play 4 random notes at the same time 
+
+4 do
+	randomnote.value;
+	0.25.wait;
+end
+
+-- the above will play 4 random notes with interval of 0.25 sec
+-- since the loop is 0.5 in the function, it is a note every 0.25 sec (a quaver?)
+ 

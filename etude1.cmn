@@ -2,7 +2,7 @@
 -- exercise 1
 
 note = C 
-note.play -- you play C
+note.play 
 
 10 do
 	note.play
@@ -12,7 +12,7 @@ end
 scale = [C, C#, F, G, G#] -- ambasel
 
 while (notbored == true) do
-	scale.choose.play(lefthand)
+	scale.choose.play(lefthand) -- choose a random note from the scale
 	[0.5, 1].choose.wait;
 end
 
@@ -42,4 +42,3 @@ if(tired) {
 		glissando.updown; -- play as if someone is not listening
 	}
 }
-
