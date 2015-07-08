@@ -1,12 +1,14 @@
 # CMN: (Code Music Notation)
 
-**Code Music Notation for Human Interpreters**
+**Instructions for the Code Music Notation for Human Interpreters**
 
-Quick Instructions of the Code Music Notation language for human interpreters. The below instructions hopefully clarify the syntax, but also introduce the computational thinking that code notation makes possible. 
+This language enables live coding composers to write notation for human instrumentalists. Textual instructions are powerful and commonly used in musical notation, but with CMN a language for computational thinking and algorithmic notation is added to the technique of text-based scores. The below instructions hopefully clarify the CMN syntax, but also introduce the computational thinking that code notation makes possible. 
 
 The CMN is a notational language for human interpreters and thus different from traditional live coding CUI's (Code User Interfaces) written for machine interpreters. CMU is an object oriented programming language with a C-family syntax and dot notation, also supporting functional approaches, such as first class functions and recursion.
 
-The syntax is inspired by SuperCollider and Lua, using the latter language's syntax for comments and various other things. When performing, choose Lua syntax colouring in your favourite code editor.
+The syntax is inspired by [SuperCollider](http://supercollider.github.io) and [Lua](http://www.lua.org), using the latter language's syntax for comments and various other things. When performing, choose Lua syntax colouring in your favourite code editor.
+
+A key feature of this language is that it's written for humans, who incidentally have much stronger capability of interpreting language and syntax than machines. Any word in any human language can therefore be used; the reason CMN exists is to provide a general syntax, a protocol, between the composer and the performer.
 
 
 **1) Variables**
