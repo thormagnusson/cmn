@@ -147,6 +147,60 @@ example:
 		end
 	}
 
+**7) Functions**
+
+Functions are very helpful if blocks of code have to be repeated (or "called") from another location in the code. They are a black-box, or an encapsulation of a musical pattern of some sort.
+
+Functions are notated with the use of curly brackets "{}" and are typically stored in a variable:
+
+	myFunc = {
+		if(silence == true){
+			chord = [C, Eb, G, A, Bb].choose(3) -- choose three notes out of the array
+		}
+	}
+
+The function then needs to be "called" or evaluated:
+
+	myFunc.value
+	
+or 
+
+	10 do
+		myFunc.value
+		10.rand.wait
+	end
+
+
+**8) Classes**
+
+CMN is is an object-oriented language and classes can be created in real-time. This is a feature that might not be used in a live-coding context, since it is quite laborous, but this is supported:
+
+	class agent(scale, tempo)
+		this.scale = scale
+		this.tempo = tempo
+	end
+	
+and the class is instantiated (an object is created from the class) as such:
+
+	a = agent(minor, 120)
+	b = agent(major, 90)
+
+properties and methods can then be added to the class (just as in JavaScript's prototypes)
+
+	agent.play = {arg tempo; 
+		inf do
+			this.scale.choose.play
+			(tempo/60).wait
+		end
+	}
+
+which now means that we can run:
+
+	a.play
+	b.play(220) -- overriding the default tempo
+	
+	
+
 
 NOTE: when performing, it can be useful to signal when a new section of the code has been evaluated by the coder. This can happen by any means, such as light, movement, or sound. At the performance at the International Conference on Live Coding, a sound signal is emitted every time code is evaluated:
 
