@@ -6,6 +6,8 @@ Quick Instructions of the Code Music Notation language for human interpreters. T
 
 The CMN is a notational language for human interpreters and thus different from traditional live coding CUI's (Code User Interfaces) written for machine interpreters. CMU is an object oriented programming language with a C-family syntax and dot notation, also supporting functional approaches, such as first class functions and recursion.
 
+The syntax is inspired by SuperCollider and Lua, using the latter language's syntax for comments and various other things. When performing, choose Lua syntax colouring in your favourite code editor.
+
 
 **1) Variables**
 
@@ -117,53 +119,4 @@ or, here introducing the ELSE statement
 	}
 
 
-
-
-**Example**
-
-
-note = C // play as if someone isn't listening
-note.play // you play C
-
-10 do
-note.play
-1.wait;
-end
-
-scale = [C, C#, F, G, G#] // ambasel
-
-while (notbored == true) do
-scale.choose.play(lefthand)
-[0.5, 1].choose.wait;
-end
-
-while (lefthand.playing == true) do
-(scale+12).choose.play(righthand)
-[0.5, 1].choose.wait;
-end
-
-inf do
-if(audience.clapping == true) {
-tempo = tempo + 1; // this might get people clapping and you would speed up (they too)
-}
-1.wait;
-end
-
-player.stopAll // I will stop the madness
-
-while(notesleft) do 
-scale = scale + 1;
-scale.play // arpeggio - here you play the scale a whole note higher every time you play it
-end
-
-
-
-//
-
-if(tired) {
-	mallet.rotate;
-	while(tired){
-		glissando.updown;
-	}
-}
 
