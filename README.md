@@ -208,7 +208,7 @@ which now means that we can run:
 	
 **9) CMN Assembly**
 
-This low-level feature of the language goes below the semantic level of functions, methods, and semantic commands of actions, to a more descriptive body movement notation. In short, down from the level of gesture and action, to the fundamental level of movement and motion. 
+Like [Extempore](http://extempore.moso.com.au), CMN has a lower level realtime compiled language, called assembly. This low-level feature of the language goes below the semantic level of functions, methods, and semantic commands of actions, to a more descriptive body movement notation. In short, down from the level of gesture and action, to the fundamental level of movement and motion. 
 
 The assembly language is also OOP, with dot-syntax, but the focus is on the human body:
 
