@@ -1,10 +1,10 @@
-# CMN: (Code Music Notation)
+# CMN (Code Music Notation)
 
 **Instructions for the Code Music Notation for Human Interpreters**
 
 This language enables live coding composers to write notation for human instrumentalists. Textual instructions are powerful and commonly used in musical notation, but with CMN a language for computational thinking and algorithmic notation is added to the technique of text-based scores. The below instructions hopefully clarify the CMN syntax, but also introduce the computational thinking that code notation makes possible. 
 
-The CMN is a notational language for human interpreters and thus different from traditional live coding CUI's (Code User Interfaces) written for machine interpreters. CMU is an object oriented programming language with a C-family syntax and dot notation, also supporting functional approaches, such as first class functions and recursion.
+The CMN is a notational language for human interpreters and thus different from traditional live coding CUI's (Code User Interfaces) designed for machine interpreters. CMU is an object oriented programming language with a C-family syntax and dot notation, also supporting functional approaches, such as first class functions and recursion.
 
 The syntax is inspired by [SuperCollider](http://supercollider.github.io) and [Lua](http://www.lua.org), using the latter language's syntax for comments and various other things. When performing, choose Lua syntax colouring in your favourite code editor.
 
@@ -23,7 +23,11 @@ Here the variable 'note' contains the value C. We can then do:
 
 	note + fifth
 
-and you'd play a G
+and the performer would play a G. Another syntax for that would be:
+
+	note + 7
+
+where a whole number represents a semitone.
 
 
 **2) Methods**
@@ -34,11 +38,11 @@ example:
 	
 	note.play
 
-Here you would play the note C
+If the variable note has been declared, as above, here you would play the note C.
 
 	(note+fifth).play
 
-Here you play the note G.
+And by bracketing, a scope can be created and this would result in playing the note G.
 
 Methods are applied to objects - or objects can have methods. Just like a bird can fly (bird = object; fly = method) - ojbects are nouns, whereas methods are verbs. 
 
@@ -62,22 +66,22 @@ Arrays are collections of values. Like a bag full of stuff. The items in the bag
 
 example:
 
-	scale = [C, C#, F, G, G#] // ambasel
+	scale = [C, C#, F, G, G#] -- ambasel
 
 Here you have five notes in an Ethopian scale called Ambasel. the '//' signifies a comment, so don't 'execute' that.
 
 the scale can be played like this:
 
-	scale.play // play the whole scale as it's written
+	scale.play -- play the whole scale as it's written
 
 or
 
-	scale.choose.play // where ONE note from the scale is chosen and played
+	scale.choose.play -- where ONE note from the scale is chosen and played
 
 Arrays can also have methods applied to them so we can write:
 
-	scale.scramble.play // scramble the array and THEN play it. 
-	scale.reverse.play // reverse the scale and THEN play it.
+	scale.scramble.play -- scramble the array and THEN play it. 
+	scale.reverse.play -- reverse the scale and THEN play it.
 
 **4) Loops**
 
@@ -88,15 +92,15 @@ a) do-loop
 example:
 
 	10 do
-		scale.choose.play // here you play a random note from the scale 10 times
-		1.wait; // wait for a second
+		scale.choose.play -- here you play a random note from the scale 10 times
+		1.wait; -- wait for a second
 	end
 
 or 
 
 	inf do
-		scale.scramble.play // scramble the scale and play it; scramble and play infinetely
-		1.wait // wait for a second
+		scale.scramble.play -- scramble the scale and play it; scramble and play infinetely
+		1.wait -- wait for a second
 	end
 
 b) while-loops
@@ -108,7 +112,7 @@ b) while-loops
 example:
 
 	while(bored == false) do 
-		note.play // play until the CONDITION is false
+		note.play -- play until the CONDITION is false
 		1.wait
 	end
 
@@ -202,6 +206,19 @@ which now means that we can run:
 	b.play(220) -- overriding the default tempo
 	
 	
+**9) CMN Assembly**
+
+This low-level feature of the language goes below the semantic level of functions, methods, and semantic commands of actions, to a more descriptive body movement notation. In short, down from the level of gesture and action, to the fundamental level of movement and motion. 
+
+The assembly language is also OOP, with dot-syntax, but the focus is on the human body:
+
+	body.arm.left.degree(30)
+	body.arm.left.movetoDegree(100, seconds:2)
+	body.arm.right.follow(body.arm.left, delay: 4)
+	body.head.nod(updown, seconds:2)
+	body.foot.left.lift(seconds:2)
+	body.foot.right.lift(seconds:2) -- yes, you're not so tall anymore
+
 
 
 NOTE: when performing, it can be useful to signal when a new section of the code has been evaluated by the coder. This can happen by any means, such as light, movement, or sound. At the performance at the International Conference on Live Coding, a sound signal is emitted every time code is evaluated:
