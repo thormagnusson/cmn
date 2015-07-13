@@ -1,0 +1,44 @@
+
+note = C
+
+note.playSustain(lefthand, righthand)
+
+scale = [C, D, Eb, G, B]
+
+2 min do
+	scale.choose.play(righthand) -- angrily at times
+	[1, 0.5].choose.wait
+end
+
+scale = random
+tempo = random
+mallets = 4
+
+while(tired.not){
+	mallets.movement(forwards, backwards) -- softly
+}
+
+-- create rhythm with left hand
+while(lefthand.tired.not){
+	note.play
+	0.5.wait
+}
+
+-- left hand getting louder
+
+scale = [C, D, Eb, G, B]
+improvise(scale)
+
+mallets.stopAll(seconds:10)
+
+for 2 min
+	[lefthand, righthand].alternate(notes.random)
+end
+
+
+note clusters (close notes)
+spread
+
+
+
+

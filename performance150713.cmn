@@ -1,0 +1,79 @@
+-- The CMN was used for the first time during the International Conference on Live Coding on July 13th, 2015, in Leeds, UK.
+
+-- Greta Eacott performed the marimba and performed the following live coded score:
+
+
+note = C
+note.play
+
+10 do 
+	(note+random(12)).play
+	1.wait
+end
+
+note.playSustain(lefthand, righthand)
+scale = [C, C#, F, G, G#] -- ambasel
+
+~ 2 min do
+	scale.choose.play(righthand)
+	[1, 0.5].choose.wait
+end
+
+-- interpreter imagines it's really could in here
+lefthand.stop
+
+-- interpreter adds to that imagination that it's really hot in here
+lefthand.copy(righthand, delay: 0.5.righthand)
+
+while(performer.havingFun == true){
+	mallets.move(forwards, backwards) -- with much gusto
+}
+
+if(lefthand.tired == false){
+	note.play -- thinking about falling from an airoplane
+	0.5.wait
+}
+
+if(lefthand.playing == true){
+	while(musicallyInteresting == true){
+		if(random(10)>8){
+			stop
+			2.wait
+		}
+		scale.choose.noteAround(bothhands, mallets:5.rand)
+		0.5.rand.wait
+	}
+}
+
+if(audience.laughs){
+	-- look at them angrily
+}
+
+if(interpreter.havingFun){
+	improvise(scale: scale)
+} else {
+	stop -- and complain that the score was rubbish - no pressure
+}
+
+p
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+
+note = C
+
+note.playSustain(lefthand, righthand)
+
+scale = [C, D, Eb, G, B]
+
+note.playSustain(lefthand)
+
+while(furious.not) {
+	-- increasingly angry
+	scale.choose.play(righthand)
+	[1, 0.5].choose.wait	
+}
+
+if(audience.dancing== true){
+	beats.make()
+}
+
+lefthand.rest
+fifth = [C, G]
+
+~10 do 
+	fifth.play(wait: 0.5)
+	fifth = fifth + wholenote -- angrily
+	1.wait 
+end
+
+texture: rough, soft, sustain, sharp, 
+brittle, hard, edgy, resonant, deadnote, 
+roll
+
+technique: edge, rattan, 
+
+alternate: lefthand this - righthand that
+
+forwards backwards (Y)
+down up (pitch - X)
+
+scale = noScale
+rhythm = random
+mallets = 4
+
+2 min do
+	forwards - backwards -- dreamy
+end
+
+10 do
+	note = random
+	note.play(ANGRY)
+	20.random.wait
+end
+
+
+
+
+
+
+
+fifth = [C, G]
+
+while(notbored){
+	[soft, sustain, edgy, brittle].choose
+	fifth.choose.play
+	1.wait
+}
+
+-- edge 
+
+
+
+
+
+
+
+
+while(bored.not < 4) {
+	scale.choose.play(righthand)
+	[1, 0.5].choose.wait	
+}
+
+
+~16 do
+	scale.choose.play(righthand)
+	[1, 0.5].choose.wait
+end
+

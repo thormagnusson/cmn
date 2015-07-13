@@ -153,6 +153,12 @@ example:
 		end
 	}
 
+Diverse terms might be useful to include either as comments or as methods or arguments in the language itself, such as:
+
+texture:  soft, sustain, sharp, brittle, hard, edgy, resonant, deadnote, etc.
+technique: edge, rattan, roll, percussive, etc.
+body movements: alternate hands, pedals, etc.
+
 **7) Functions**
 
 Functions are very helpful if blocks of code have to be repeated (or "called") from another location in the code. They are a black-box, or an encapsulation of a musical pattern of some sort.
