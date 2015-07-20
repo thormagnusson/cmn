@@ -211,8 +211,30 @@ which now means that we can run:
 	a.play
 	b.play(220) -- overriding the default tempo
 	
+
+**9) Rhythmic scores**
 	
-**9) CMN Assembly**
+In some cases graphical elements can be helpful, for example for percussive scoring. In live coding languages we have good precedence of such scores for example:
+
+	perc = |q   c   q c q   |
+	
+or
+	
+	perc = |q...c...q.c.q...|
+
+the above is percussive notation in [ixi lang](http://www.ixi-audio.net), where alphabetic characters map to samples (of percussive nature). Another type of notation would be:
+
+	drummer.playHard("o-x-o-xxo-x-") 
+
+which is a [Gibber](http://gibber.mat.ucsb.edu) style notation, similar to ixi lang, where letters signify sounds and "-" silences.
+
+Finally, we find an interesting syntax in [Tidal](http://yaxu.org/tidal/), where sub-arrays can be introduced, thus less visually isomorphic than ixi lang or Gibber, but with a potantial for more complexity:
+
+	drummer "[bd sn [bd sn] sn bd [sn [bd sn]]]"
+
+Check ixi lang, Gibber and Tidal for further explorations of how these scores work.
+
+**10) CMN Assembly**
 
 Like [Extempore](http://extempore.moso.com.au), CMN has a lower level realtime compiled language, called assembly. This low-level feature of the language goes below the semantic level of functions, methods, and semantic commands of actions, to a more descriptive body movement notation. In short, down from the level of gesture and action, to the fundamental level of movement and motion. 
 
