@@ -2,13 +2,13 @@
 
 **Instructions for the Code Music Notation for Human Interpreters**
 
-This language enables live coding composers to write notation for human instrumentalists. Textual instructions are powerful and commonly used in musical notation, but with CMN a language for computational thinking and algorithmic notation is added to the technique of text-based scores. The below instructions hopefully clarify the CMN syntax, but also introduce the computational thinking that code notation makes possible. 
+This language enables composers to write notation for human instrumentalists, for example in a live coding context. Textual instructions are powerful and commonly used in musical notation, but with CMN, a language for algorithmic or computational notation is added to the technique of text-based scores. The below instructions hopefully clarify the CMN syntax, but also introduce the type computational thinking that code notation makes possible. 
 
 The CMN is a notational language for human interpreters and thus different from traditional live coding CUI's (Code User Interfaces) designed for machine interpreters. CMU is an object oriented programming language with a C-family syntax and dot notation, also supporting functional approaches, such as first class functions and recursion.
 
-The syntax is inspired by [SuperCollider](http://supercollider.github.io) and [Lua](http://www.lua.org), using the latter language's syntax for comments and various other things. When performing, choose Lua syntax colouring in your favourite code editor.
+The syntax is inspired by [SuperCollider](http://supercollider.github.io) and [Lua](http://www.lua.org), using the latter language's syntax for comments, syntax colouring, and various other things. When performing, choose Lua syntax colouring in your favourite code editor.
 
-A key feature of this language is that it's written for humans, who incidentally have much stronger capability of interpreting language and syntax than machines. Any word in any human language can therefore be used; the reason CMN exists is to provide a general syntax, a protocol, between the composer and the performer.
+A key feature of this language is that it's written for humans, who incidentally have much stronger capability and flexibility of interpreting language syntax and semantics than machines. Any word in any human language can therefore be used; the reason CMN exists is to provide a general syntax, a protocol, between the composer and the performer.
 
 
 **1) Variables**
@@ -156,9 +156,7 @@ example:
 Diverse terms might be useful to include either as comments or as methods or arguments in the language itself, such as:
 
 texture:  soft, sustain, sharp, brittle, hard, edgy, resonant, deadnote, etc.
-
 technique: edge, rattan, roll, percussive, etc.
-
 body movements: alternate hands, pedals, etc.
 
 **7) Functions**
