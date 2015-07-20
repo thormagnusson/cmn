@@ -214,7 +214,7 @@ which now means that we can run:
 
 **9) Rhythmic scores**
 	
-In some cases graphical elements can be helpful, for example for percussive scoring. In live coding languages we have good precedence of such scores for example:
+In some cases, such as in scoring for percussion, graphical elements can be helpful. In live coding languages we have good precedence of such scores, for example:
 
 	perc = |q   c   q c q   |
 	
