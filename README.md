@@ -10,6 +10,8 @@ The syntax is inspired by [SuperCollider](http://supercollider.github.io) and [L
 
 A key feature of this language is that it's written for humans, who incidentally have much stronger capability and flexibility of interpreting language syntax and semantics than machines. Any word in any human language can therefore be used; the reason CMN exists is to provide a general syntax, a protocol, between the composer and the performer.
 
+The CMN was first trialled during the 1st [International Conference on Live Coding](http://iclc.livecodenetwork.org) in Leeds 2015 with marimba player Greta Eacott. A documentation of that performance can be found [here](https://www.youtube.com/watch?v=JV-Vhimg8-Y).
+
 
 **1) Variables**
 
@@ -68,7 +70,7 @@ example:
 
 	scale = [C, C#, F, G, G#] -- ambasel
 
-Here you have five notes in an Ethopian scale called Ambasel. the '//' signifies a comment, so don't 'execute' that.
+Here you have five notes in an Ethopian scale called Ambasel. the '--' signifies a comment, so don't 'execute' that (but see the section on comments).
 
 the scale can be played like this:
 
@@ -116,7 +118,18 @@ example:
 		1.wait
 	end
 
-here YOU decide whether you're bored or not - obviously.
+here the performer decides whether they're bored or not - obviously.
+
+The .wait command within the loop defines the note length here. Writing this in seconds could be less intuitive for some musicians so it could equally be defined as:
+
+	tempo = 120
+	note = 60/120 (or 'wholenote' or 'semibreve' - you choose the variable name)
+	
+	inf do
+		scale.scramble.play
+		-- chose a wholenote/semibreve, half note/minim or a quarter note/crochet
+		[note, note/2, note/4].choose.wait
+	end
 
 
 **5) Conditionals**
