@@ -122,13 +122,13 @@ here the performer decides whether they're bored or not - obviously.
 
 The .wait command within the loop defines the note length here. Writing this in seconds could be less intuitive for some musicians so it could equally be defined as:
 
-	tempo = 120
-	note = 60/120 (or 'wholenote' or 'semibreve' - you choose the variable name)
+	tempo = 120 -- bpm (or bpitu (beat per imperial time unit), if in the UK)
+	notedur = 60/120 (or 'wholenote' or 'semibreve' - you choose the variable name)
 	
 	inf do
 		scale.scramble.play
 		-- chose a wholenote/semibreve, half note/minim or a quarter note/crochet
-		[note, note/2, note/4].choose.wait
+		[notedur, notedur/2, notedur/4].choose.wait
 	end
 
 
