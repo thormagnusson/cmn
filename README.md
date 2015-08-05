@@ -122,7 +122,7 @@ here the performer decides whether they're bored or not - obviously.
 
 The .wait command within the loop defines the note length here. Writing this in seconds could be less intuitive for some musicians so it could equally be defined as:
 
-	tempo = 120 -- bpm (or bpitu (beat per imperial time unit), if in the UK)
+	tempo = 120 -- bpm (or bpitu (beats per imperial time unit), if you are in the UK)
 	notedur = 60/120 (or 'wholenote' or 'semibreve' - you choose the variable name)
 	
 	inf do
