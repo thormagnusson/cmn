@@ -10,8 +10,9 @@ The syntax is inspired by [SuperCollider](http://supercollider.github.io) and [L
 
 A key feature of this language is that it's written for humans, who incidentally have much stronger capability and flexibility of interpreting language syntax and semantics than machines. Any word in any human language can therefore be used; the reason CMN exists is to provide a general syntax, a protocol, between the composer and the performer.
 
-The CMN was first trialled during the 1st [International Conference on Live Coding](http://iclc.livecodenetwork.org) in Leeds 2015 with marimba player Greta Eacott. A documentation of that performance can be found [here](https://www.youtube.com/watch?v=JV-Vhimg8-Y).
+The CMN was first trialled during the 1st [International Conference on Live Coding](http://iclc.livecodenetwork.org) in Leeds 2015 with marimba player Greta Eacott. A documentation of that performance can be found by clicking below:
 
+[![Performance with Greta Eacott](http://img.youtube.com/vi/JV-Vhimg8-Y/0.jpg)](http://www.youtube.com/watch?v=JV-Vhimg8-Y)
 
 **1) Variables**
 
